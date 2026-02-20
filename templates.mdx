@@ -1,0 +1,122 @@
+---
+title: "Templates"
+---
+
+## Titles & Descriptions
+
+SlabIQ allows you to create **custom title and description templates** for your marketplace listings.\
+Templates save time and ensure consistency, while dynamically filling in card-specific information.
+
+You can use **variables** and **conditional formatting** to make templates smart and flexible.
+
+---
+
+# Basic Variables
+
+Use the following variables to insert item-specific data into your templates:
+
+| Variable         | Description                   | Example            |
+| :--------------- | :---------------------------- | :----------------- |
+| `{PLAYER}`       | Player name                   | LeBron James       |
+| `{TEAM}`         | Team name                     | Los Angeles Lakers |
+| `{YEAR}`         | Card year                     | 2023               |
+| `{SET}`          | Card set name                 | Prizm              |
+| `{CARD_NUMBER}`  | Card number (auto-prepends #) | #23                |
+| `{MANUFACTURER}` | Brand / manufacturer          | Panini             |
+| `{CONDITION}`    | Card condition                | Mint               |
+| `{SPORT}`        | Sport type                    | Basketball         |
+
+> ⚡ Tip: Variables are **case-sensitive** and must be enclosed in curly braces exactly as shown.
+
+---
+
+# Conditional Formatting
+
+Conditional blocks let you **show or hide parts of a template** based on item attributes.
+
+| Condition                        | Description                               | Example Use                                  |
+| :------------------------------- | :---------------------------------------- | :------------------------------------------- |
+| `[IF_rookie]...[/IF_rookie]`     | Show content if the card is a rookie card | `[IF_rookie]Rookie Card![/IF_rookie]`        |
+| `[IF_auto]...[/IF_auto]`         | Show content if the card is autographed   | `[IF_auto]Autographed[/IF_auto]`             |
+| `[IF_numbered]...[/IF_numbered]` | Show content if the card is numbered      | `[IF_numbered]Limited Edition[/IF_numbered]` |
+| `[IF_graded]...[/IF_graded]`     | Show content if the card is graded        | `[IF_graded]Graded Card[/IF_graded]`         |
+| `[IF_patch]...[/IF_patch]`       | Show content if the card has a patch      | `[IF_patch]Includes Patch[/IF_patch]`        |
+
+> ⚡ Tip: Conditional blocks can be **nested** for advanced logic.
+
+---
+
+# Example: Title Template
+
+```
+{YEAR} {SET} {PLAYER} {CARD_NUMBER} [IF_graded]{CONDITION} Graded[/IF_graded] [IF_auto]Autographed[/IF_auto] [IF_patch]Patch[/IF_patch]
+```
+
+**Example Output:**
+
+- 2023 Prizm LeBron James #23 Mint Graded Autographed Patch
+- 2023 Prizm LeBron James #23 Autographed
+- 2023 Prizm LeBron James #23
+
+> This template automatically adjusts based on card attributes.
+
+---
+
+# Example: Description Template
+
+```
+{PLAYER} {YEAR} {SET} Card
+Manufacturer: {MANUFACTURER}
+Sport: {SPORT}
+[IF_graded]Condition: {CONDITION} (Graded)[/IF_graded]
+[IF_auto]Autographed: Yes[/IF_auto]
+[IF_numbered]Numbered Card[/IF_numbered]
+[IF_patch]Includes Patch[/IF_patch]
+```
+
+**Example Output:**
+
+```
+LeBron James 2023 Prizm Card
+Manufacturer: Panini
+Sport: Basketball
+Condition: Mint (Graded)
+Autographed: Yes
+Includes Patch
+```
+
+> Users can create **one template for all listings** — no manual editing required.
+
+---
+
+# Tips for Creating Templates
+
+- Always use **curly braces **`{}` for variables
+- Use **conditional blocks** to handle optional features
+- Preview your template before publishing
+- Combine multiple variables for clean, consistent titles
+- Save templates for re-use across multiple lots or batches
+
+---
+
+# Advanced Examples
+
+**Nested Conditional Example:**
+
+```
+{YEAR} {SET} {PLAYER} {CARD_NUMBER} [IF_graded]{CONDITION} Graded[/IF_graded] [IF_auto][IF_graded]+ Autographed[/IF_graded] Autographed[/IF_auto]
+```
+
+- Outputs “Mint Graded + Autographed” if both graded and autographed
+- Outputs “Autographed” if only autographed
+
+---
+
+# Next Steps
+
+After creating your templates:
+
+1. Apply them to **Lot Builder batches** or **individual items**
+2. Preview generated titles/descriptions
+3. Adjust conditional formatting as needed
+4. Publish your listings to eBay or other marketplaces
