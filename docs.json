@@ -75,7 +75,9 @@
           {
             "group": "Getting Started",
             "pages": [
-              "introduction"
+              "introduction",
+              "creating-an-acocunt",
+              "selecting-a-plan"
             ]
           }
         ]
