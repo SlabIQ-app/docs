@@ -11,6 +11,12 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Welcome",
+        "pages": [
+          "welcome-to-slab-iq"
+        ]
+      },
+      {
         "tab": "Guides",
         "groups": [
           {
