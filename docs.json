@@ -21,7 +21,19 @@
               "selecting-a-plan",
               "Integrations",
               "batches",
-              "templates"
+              "templates",
+              {
+                "group": "Reports",
+                "pages": [
+                  "profit-and-loss",
+                  "inventory-aging",
+                  "sales-history",
+                  "cross-listings",
+                  "stock-tracking",
+                  "prices",
+                  "inventory-supply-and-cost"
+                ]
+              }
             ]
           }
         ]
