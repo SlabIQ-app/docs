@@ -9,7 +9,58 @@
   },
   "favicon": "/images/logo.png",
   "navigation": {
-    "groups": []
+    "tabs": [
+      {
+        "tab": "Welcome",
+        "pages": [
+          "welcome-to-slab-iq"
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "creating-an-account",
+              "selecting-a-plan",
+              "integrations",
+              "batches",
+              "templates",
+              {
+                "group": "Reports",
+                "pages": [
+                  "profit-and-loss",
+                  "inventory-aging",
+                  "sales-history",
+                  "cross-listing",
+                  "stock-tracking",
+                  "prices",
+                  "inventory-supply-and-cost"
+                ]
+              },
+              "search-and-comp-checker",
+              "pick-list",
+              "collections-and-binders",
+              {
+                "group": "Settings",
+                "pages": [
+                  "profile",
+                  "subscription",
+                  "notifications",
+                  "security",
+                  "appearance",
+                  "inventory",
+                  "branding",
+                  "teams"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "navbar": {
     "links": [
